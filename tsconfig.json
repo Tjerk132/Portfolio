@@ -1,0 +1,21 @@
+{
+    "ts-node": {
+        "files": true
+    },
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "esModuleInterop": true,
+        "outDir": "build",
+        "rootDir": "./src",
+        "typeRoots": [
+            "./src/@types",
+        ], /* Specify multiple folders that act like './node_modules/@types'. */
+        "plugins": [
+            {
+                "transform": "@threeify/typescript-plugin-glsl-transpiler"
+            }
+        ]
+    }
+}
