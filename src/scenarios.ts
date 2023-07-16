@@ -8,7 +8,7 @@ import { Moon } from "./components/universe/Moon";
 import { Saturn } from "./components/universe/Saturn";
 import { Sun } from "./components/universe/Sun";
 import { Earth } from "./components/universe/Earth";
-import { RenderScene } from "./components/RenderScene";
+import { UniverseRenderScene } from './components/universe/UniverseRenderScene';
 
 // import { GLTFLoader, O } from 'three/examples/jsm/'//'three-addons';
 import * as THREE from 'three';
@@ -92,7 +92,6 @@ export const arrowUp = () => {
 
     // renderer.gammaOuput = true
 
-
     // const material = new LineBasicMaterial({ color: 0x0000ff });
 
     // const points: Vector3[] = [];
@@ -150,25 +149,11 @@ export const arrowUp = () => {
         renderer.setSize(window.innerWidth, window.innerHeight);
     });
     animate();
-
-    // scene.add(line);
-    // renderer.render(scene, camera);
 }
 
 export const universe = () => {
 
-    const scene = new RenderScene();
-
-    const textureLoader = new TextureLoader();
-    const backgroundGeometry = new SphereGeometry(500);
-    const backgroundMaterial = new MeshStandardMaterial({
-        map: textureLoader.load("milkyway/8k_stars_milky_way.jpg"),
-        side: DoubleSide
-    });
-
-    const background = new Mesh(backgroundGeometry, backgroundMaterial);
-
-    scene.add3DObjects(background);
+    const scene = new UniverseRenderScene();
 
     const sun = new Sun({ position: new Vector3(0, 30, 0) });
     scene.addRenderObject(sun);
@@ -216,8 +201,6 @@ export const universe = () => {
     // scene.add3DObjects(torus);
 
     // scene.scene.fog = new THREE.Fog( 0x23272a, 0.5, 1700 );
-
-    // scene.addRenderObject(earth, sun, moon);
 
     scene.animate();
 
