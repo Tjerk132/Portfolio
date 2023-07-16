@@ -11,4 +11,3 @@ const app = initializeApp(environment.firebase);
 const analytics = getAnalytics(app);
 
 universe();
-//firebase deploy --only hosting:portfolio-f2fe8
