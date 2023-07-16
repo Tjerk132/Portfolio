@@ -20,7 +20,6 @@
   "homepage": "https://github.com/Tjerk132/Portfolio#readme",
   "dependencies": {
     "@types/dat.gui": "^0.7.10",
-    "@types/typescript": "^2.0.0",
     "dat.gui": "^0.7.9",
     "firebase": "^9.23.0",
     "sass": "^1.63.6",
