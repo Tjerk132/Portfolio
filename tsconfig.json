@@ -8,7 +8,7 @@
         "moduleResolution": "Node",
         "esModuleInterop": true,
         "outDir": "build",
-        "rootDir": "./src",
+        "rootDir": "",
         "typeRoots": [
             "./src/@types",
         ], /* Specify multiple folders that act like './node_modules/@types'. */
