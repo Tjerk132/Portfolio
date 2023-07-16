@@ -6,8 +6,10 @@
 ```powershell
 npm i
 ```
-##### Thereafter navigate to the `src` folder (with `cd /src`) and execute the following command
+##### Thereafter navigate to the `src` folder (with `cd /src`) and execute the following command.
 ```powershell
 npx vite
 ```
-##### The application should now be running on the port that is displayed in the output terminal  and  can be accessed by clicking on the link or by navigating to *http://localhost:**port**/*
+##### The application should now be running on the port that is displayed in the output terminal  and  can be accessed by clicking on the link or by navigating to http://localhost:**port**/
+
+## This application is currently running on https://portfolio-f2fe8.firebaseapp.com

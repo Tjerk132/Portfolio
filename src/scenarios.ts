@@ -134,7 +134,6 @@ export const arrowUp = () => {
 
     });
 
-
     function animate() {
         requestAnimationFrame(animate);
         stats.update();
@@ -144,7 +143,6 @@ export const arrowUp = () => {
     }
 
     renderer.setAnimationLoop(animate)
-
 
     window.addEventListener('resize', function () {
         camera.aspect = window.innerWidth / window.innerHeight;
@@ -166,7 +164,7 @@ export const universe = () => {
     const backgroundMaterial = new MeshStandardMaterial({
         map: textureLoader.load("milkyway/8k_stars_milky_way.jpg"),
         side: DoubleSide
-    })
+    });
 
     const background = new Mesh(backgroundGeometry, backgroundMaterial);
 

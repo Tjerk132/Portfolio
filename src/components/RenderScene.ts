@@ -3,7 +3,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import Stats from 'three/examples/jsm/libs/stats.module';
 import { RenderObject } from './RenderObject';
 import { Sun } from './universe/Sun';
-import { Planet } from './universe/Base/Planet';
+import { Star } from './universe/Star';
 
 export class RenderScene {
 
@@ -116,10 +116,6 @@ export class RenderScene {
         this.raycaster.setFromCamera(this.mouse, this.camera);
         this.updateCameraTrail();
 
-        // torus.rotation.x += 0.01;
-        // torus.rotation.y += 0.005;
-        // torus.rotation.z += 0.01;
-
         this.renderer.render(this.scene, this.camera);
     }
 
@@ -142,14 +138,13 @@ export class RenderScene {
         if (intersections.length) {
             const intersection = intersections[0];
 
-            const clickedPlanet = this.renderObjects.find(renderObject => intersection.object.parent.uuid === renderObject.group.uuid)
+            const clickedObject = this.renderObjects.find(renderObject => intersection.object.parent.uuid === renderObject.group.uuid)
 
-            if (!(clickedPlanet instanceof Sun)) {
+            if (!(clickedObject instanceof Sun || clickedObject instanceof Star)) {
                 return intersection.object;
             }
         }
-        // console.log(intersections.length);
-        
+ 
         return undefined;
     }
 }
