@@ -6,7 +6,7 @@
 ```powershell
 npm i
 ```
-##### Thereafter navigate to the `src` folder (with `cd /src`) and execute the following command.
+##### Thereafter execute the following command from the root folder.
 ```powershell
 npx vite
 ```
